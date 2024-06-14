@@ -20,7 +20,8 @@ const Index = () => {
         create: create,
         update: update
       },
-      backgroundColor: '#1a1a1a'
+      backgroundColor: '#1a1a1a',
+      parent: 'game-container' // Add this line to specify the parent container
     };
 
     const game = new Phaser.Game(config);
@@ -100,7 +101,7 @@ const Index = () => {
 
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <div id="game-container"></div>
+      <div id="game-container" style={{ width: '800px', height: '600px' }}></div> {/* Ensure the game container has the correct dimensions */}
     </Container>
   );
 };
